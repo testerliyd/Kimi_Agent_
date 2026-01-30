@@ -1,0 +1,102 @@
+version: '3.8'
+
+services:
+  # MySQL数据库
+  mysql:
+    image: mysql:8.0
+    container_name: smarttest_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-password}
+      MYSQL_DATABASE: ${DB_NAME:-smarttest}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  # Redis缓存
+  redis:
+    image: redis:7-alpine
+    container_name: smarttest_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  # Django应用
+  web:
+    build: .
+    container_name: smarttest_web
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=smarttest.settings
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_NAME=${DB_NAME:-smarttest}
+      - DB_USER=root
+      - DB_PASSWORD=${DB_PASSWORD:-password}
+      - REDIS_URL=redis://redis:6379/1
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    volumes:
+      - .:/app
+      - static_files:/app/staticfiles
+      - media_files:/app/media
+    depends_on:
+      - mysql
+      - redis
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+
+  # Celery Worker
+  celery:
+    build: .
+    container_name: smarttest_celery
+    restart: always
+    environment:
+      - DJANGO_SETTINGS_MODULE=smarttest.settings
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_NAME=${DB_NAME:-smarttest}
+      - DB_USER=root
+      - DB_PASSWORD=${DB_PASSWORD:-password}
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    volumes:
+      - .:/app
+    depends_on:
+      - mysql
+      - redis
+    command: celery -A smarttest worker -l info
+
+  # Celery Beat (定时任务)
+  celery-beat:
+    build: .
+    container_name: smarttest_celery_beat
+    restart: always
+    environment:
+      - DJANGO_SETTINGS_MODULE=smarttest.settings
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_NAME=${DB_NAME:-smarttest}
+      - DB_USER=root
+      - DB_PASSWORD=${DB_PASSWORD:-password}
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    volumes:
+      - .:/app
+    depends_on:
+      - mysql
+      - redis
+    command: celery -A smarttest beat -l info
+
+volumes:
+  mysql_data:
+  redis_data:
+  static_files:
+  media_files:

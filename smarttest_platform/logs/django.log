@@ -1,0 +1,346 @@
+INFO 2026-01-30 14:08:33,970 autoreload 509 140096926927744 Watching for file changes with StatReloader
+WARNING 2026-01-30 14:08:38,923 middleware 509 140096647984832 API请求警告: {'timestamp': '2026-01-30T06:08:38.923457+00:00', 'method': 'GET', 'path': '/api/health/', 'query_params': {}, 'status_code': 404, 'duration_ms': 9.99, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+WARNING 2026-01-30 14:08:38,936 log 509 140096647984832 Not Found: /api/health/
+WARNING 2026-01-30 14:08:38,936 basehttp 509 140096647984832 "GET /api/health/ HTTP/1.1" 404 4299
+INFO 2026-01-30 14:08:43,387 middleware 509 140096647984832 API请求: {'timestamp': '2026-01-30T06:08:43.387280+00:00', 'method': 'POST', 'path': '/api/auth/token/', 'query_params': {}, 'status_code': 200, 'duration_ms': 555.52, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:08:43,390 basehttp 509 140096647984832 "POST /api/auth/token/ HTTP/1.1" 200 483
+INFO 2026-01-30 14:09:00,432 middleware 509 140096647984832 API请求: {'timestamp': '2026-01-30T06:09:00.432139+00:00', 'method': 'GET', 'path': '/api/bugs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 16.73, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:00,436 basehttp 509 140096647984832 "GET /api/bugs/ HTTP/1.1" 200 141
+WARNING 2026-01-30 14:09:00,455 middleware 509 140096647984832 API请求警告: {'timestamp': '2026-01-30T06:09:00.455044+00:00', 'method': 'GET', 'path': '/api/users/me/', 'query_params': {}, 'status_code': 404, 'duration_ms': 12.75, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+WARNING 2026-01-30 14:09:00,457 log 509 140096647984832 Not Found: /api/users/me/
+WARNING 2026-01-30 14:09:00,460 basehttp 509 140096647984832 "GET /api/users/me/ HTTP/1.1" 404 15467
+INFO 2026-01-30 14:09:00,483 middleware 509 140096618821312 API请求: {'timestamp': '2026-01-30T06:09:00.483453+00:00', 'method': 'GET', 'path': '/api/projects/', 'query_params': {}, 'status_code': 200, 'duration_ms': 25.79, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:00,520 basehttp 509 140096618821312 "GET /api/projects/ HTTP/1.1" 200 141
+INFO 2026-01-30 14:09:00,522 middleware 509 140096627214016 API请求: {'timestamp': '2026-01-30T06:09:00.522955+00:00', 'method': 'GET', 'path': '/api/testcases/', 'query_params': {}, 'status_code': 200, 'duration_ms': 67.18, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:00,524 basehttp 509 140096627214016 "GET /api/testcases/ HTTP/1.1" 200 162
+INFO 2026-01-30 14:09:25,293 middleware 509 140096627214016 API请求: {'timestamp': '2026-01-30T06:09:25.293678+00:00', 'method': 'GET', 'path': '/api/feishu/', 'query_params': {}, 'status_code': 200, 'duration_ms': 10.41, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:25,295 middleware 509 140096618821312 API请求: {'timestamp': '2026-01-30T06:09:25.295178+00:00', 'method': 'GET', 'path': '/api/perftest/', 'query_params': {}, 'status_code': 200, 'duration_ms': 9.52, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:25,297 basehttp 509 140096618821312 "GET /api/perftest/ HTTP/1.1" 200 167
+INFO 2026-01-30 14:09:25,298 basehttp 509 140096627214016 "GET /api/feishu/ HTTP/1.1" 200 217
+INFO 2026-01-30 14:09:25,317 middleware 509 140096627214016 API请求: {'timestamp': '2026-01-30T06:09:25.317072+00:00', 'method': 'GET', 'path': '/api/core/', 'query_params': {}, 'status_code': 200, 'duration_ms': 6.12, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:25,318 basehttp 509 140096627214016 "GET /api/core/ HTTP/1.1" 200 181
+INFO 2026-01-30 14:09:25,337 middleware 509 140096618821312 API请求: {'timestamp': '2026-01-30T06:09:25.337110+00:00', 'method': 'GET', 'path': '/api/apitest/', 'query_params': {}, 'status_code': 200, 'duration_ms': 5.23, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:25,338 basehttp 509 140096618821312 "GET /api/apitest/ HTTP/1.1" 200 219
+INFO 2026-01-30 14:09:25,342 middleware 509 140096627214016 API请求: {'timestamp': '2026-01-30T06:09:25.341974+00:00', 'method': 'GET', 'path': '/api/llm/', 'query_params': {}, 'status_code': 200, 'duration_ms': 11.89, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:25,345 middleware 509 140096647984832 API请求: {'timestamp': '2026-01-30T06:09:25.345743+00:00', 'method': 'GET', 'path': '/api/users/users/me/', 'query_params': {}, 'status_code': 200, 'duration_ms': 11.5, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:09:25,345 basehttp 509 140096627214016 "GET /api/llm/ HTTP/1.1" 200 229
+INFO 2026-01-30 14:09:25,347 basehttp 509 140096647984832 "GET /api/users/users/me/ HTTP/1.1" 200 236
+INFO 2026-01-30 14:10:04,495 autoreload 509 140096926927744 /mnt/okcomputer/output/smarttest_platform/apps/users/urls.py changed, reloading.
+INFO 2026-01-30 14:10:07,253 autoreload 733 140382483114880 Watching for file changes with StatReloader
+INFO 2026-01-30 14:10:25,356 autoreload 733 140382483114880 /mnt/okcomputer/output/smarttest_platform/apps/users/views.py changed, reloading.
+INFO 2026-01-30 14:10:27,545 autoreload 752 140320682183552 Watching for file changes with StatReloader
+INFO 2026-01-30 14:10:48,936 autoreload 784 139683466496896 Watching for file changes with StatReloader
+INFO 2026-01-30 14:10:59,261 middleware 784 139683187128000 API请求: {'timestamp': '2026-01-30T06:10:59.261422+00:00', 'method': 'GET', 'path': '/api/users/auth/me/', 'query_params': {}, 'status_code': 200, 'duration_ms': 28.96, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:10:59,262 basehttp 784 139683187128000 "GET /api/users/auth/me/ HTTP/1.1" 200 236
+INFO 2026-01-30 14:11:22,655 middleware 784 139683187128000 API请求: {'timestamp': '2026-01-30T06:11:22.655316+00:00', 'method': 'GET', 'path': '/api/users/roles/', 'query_params': {}, 'status_code': 200, 'duration_ms': 31.8, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:11:22,657 middleware 784 139683167930048 API请求: {'timestamp': '2026-01-30T06:11:22.657436+00:00', 'method': 'GET', 'path': '/api/llm/providers/', 'query_params': {}, 'status_code': 200, 'duration_ms': 22.12, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:11:22,659 basehttp 784 139683167930048 "GET /api/llm/providers/ HTTP/1.1" 200 1815
+INFO 2026-01-30 14:11:22,662 basehttp 784 139683187128000 "GET /api/users/roles/ HTTP/1.1" 200 2573
+INFO 2026-01-30 14:11:22,665 middleware 784 139683159537344 API请求: {'timestamp': '2026-01-30T06:11:22.665826+00:00', 'method': 'GET', 'path': '/api/users/permissions/', 'query_params': {}, 'status_code': 200, 'duration_ms': 16.69, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:11:22,667 basehttp 784 139683159537344 "GET /api/users/permissions/ HTTP/1.1" 200 3618
+WARNING 2026-01-30 14:11:22,978 connection 784 139683159537344 No hostname was supplied. Reverting to default 'localhost'
+WARNING 2026-01-30 14:11:22,980 connection 784 139683159537344 No hostname was supplied. Reverting to default 'localhost'
+INFO 2026-01-30 14:11:23,093 middleware 784 139683187128000 API请求: {'timestamp': '2026-01-30T06:11:23.093940+00:00', 'method': 'GET', 'path': '/api/core/dashboard/', 'query_params': {}, 'status_code': 200, 'duration_ms': 13.28, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:11:23,094 basehttp 784 139683187128000 "GET /api/core/dashboard/ HTTP/1.1" 200 279
+ERROR 2026-01-30 14:11:23,981 middleware 784 139683159537344 API请求错误: {'timestamp': '2026-01-30T06:11:23.981442+00:00', 'method': 'GET', 'path': '/api/core/health/', 'query_params': {}, 'status_code': 503, 'duration_ms': 1197.58, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+ERROR 2026-01-30 14:11:23,987 log 784 139683159537344 Service Unavailable: /api/core/health/
+ERROR 2026-01-30 14:11:23,988 basehttp 784 139683159537344 "GET /api/core/health/ HTTP/1.1" 503 288
+INFO 2026-01-30 14:12:07,775 basehttp 784 139683159537344 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2026-01-30 14:12:07,811 middleware 784 139683159537344 API请求警告: {'timestamp': '2026-01-30T06:12:07.811355+00:00', 'method': 'POST', 'path': '/api/auth/login/', 'query_params': {}, 'status_code': 404, 'duration_ms': 20.39, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 14:12:07,812 log 784 139683159537344 Not Found: /api/auth/login/
+WARNING 2026-01-30 14:12:07,812 basehttp 784 139683159537344 "POST /api/auth/login/ HTTP/1.1" 404 4312
+INFO 2026-01-30 14:13:10,771 autoreload 784 139683466496896 /mnt/okcomputer/output/smarttest_platform/apps/users/urls.py changed, reloading.
+INFO 2026-01-30 14:13:15,860 autoreload 1004 140450624826240 Watching for file changes with StatReloader
+INFO 2026-01-30 14:13:47,806 autoreload 1004 140450624826240 /mnt/okcomputer/output/smarttest_platform/apps/users/views.py changed, reloading.
+INFO 2026-01-30 14:13:51,746 autoreload 1015 140178335234944 Watching for file changes with StatReloader
+INFO 2026-01-30 14:14:07,911 autoreload 1039 140704193559424 Watching for file changes with StatReloader
+INFO 2026-01-30 14:14:19,767 middleware 1039 140703915046592 API请求: {'timestamp': '2026-01-30T06:14:19.767644+00:00', 'method': 'POST', 'path': '/api/users/auth/login/', 'query_params': {}, 'status_code': 200, 'duration_ms': 1480.91, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:14:19,791 basehttp 1039 140703915046592 "POST /api/users/auth/login/ HTTP/1.1" 200 748
+WARNING 2026-01-30 14:15:11,682 middleware 1039 140703915046592 API请求警告: {'timestamp': '2026-01-30T06:15:11.682175+00:00', 'method': 'POST', 'path': '/api/auth/login/', 'query_params': {}, 'status_code': 404, 'duration_ms': 36.84, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 14:15:11,687 log 1039 140703915046592 Not Found: /api/auth/login/
+WARNING 2026-01-30 14:15:11,699 basehttp 1039 140703915046592 "POST /api/auth/login/ HTTP/1.1" 404 4312
+INFO 2026-01-30 14:45:03,379 autoreload 486 139746003303296 Watching for file changes with StatReloader
+ERROR 2026-01-30 14:45:16,477 exceptions 486 139745702180544 未捕获的异常: No module named 'redis'
+ERROR 2026-01-30 14:45:16,487 exceptions 486 139745702180544 Traceback (most recent call last):
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/okcomputer/output/smarttest_platform/apps/core/views.py", line 357, in get
+    import redis
+ModuleNotFoundError: No module named 'redis'
+
+ERROR 2026-01-30 14:45:16,515 log 486 139745702180544 Internal Server Error: /api/core/health/
+Traceback (most recent call last):
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/okcomputer/output/smarttest_platform/apps/core/views.py", line 357, in get
+    import redis
+ModuleNotFoundError: No module named 'redis'
+ERROR 2026-01-30 14:45:16,516 middleware 486 139745702180544 API请求错误: {'timestamp': '2026-01-30T06:45:16.516097+00:00', 'method': 'GET', 'path': '/api/core/health/', 'query_params': {}, 'status_code': 500, 'duration_ms': 125.56, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+ERROR 2026-01-30 14:45:16,516 basehttp 486 139745702180544 "GET /api/core/health/ HTTP/1.1" 500 94441
+INFO 2026-01-30 14:46:52,178 autoreload 556 140370341575552 Watching for file changes with StatReloader
+INFO 2026-01-30 14:46:58,462 middleware 556 140370041108160 API请求: {'timestamp': '2026-01-30T06:46:58.462287+00:00', 'method': 'POST', 'path': '/api/users/auth/login/', 'query_params': {}, 'status_code': 200, 'duration_ms': 1415.17, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 14:46:58,463 basehttp 556 140370041108160 "POST /api/users/auth/login/ HTTP/1.1" 200 754
+INFO 2026-01-30 14:47:32,401 middleware 556 140370041108160 API请求: {'timestamp': '2026-01-30T06:47:32.401564+00:00', 'method': 'POST', 'path': '/api/users/auth/login/', 'query_params': {}, 'status_code': 200, 'duration_ms': 836.9, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,413 basehttp 556 140370041108160 "POST /api/users/auth/login/ HTTP/1.1" 200 754
+INFO 2026-01-30 14:47:32,426 middleware 556 140370020861632 API请求: {'timestamp': '2026-01-30T06:47:32.426512+00:00', 'method': 'GET', 'path': '/api/users/auth/me/', 'query_params': {}, 'status_code': 200, 'duration_ms': 8.75, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,427 basehttp 556 140370020861632 "GET /api/users/auth/me/ HTTP/1.1" 200 252
+INFO 2026-01-30 14:47:32,438 middleware 556 140370012468928 API请求: {'timestamp': '2026-01-30T06:47:32.438287+00:00', 'method': 'GET', 'path': '/api/projects/', 'query_params': {}, 'status_code': 200, 'duration_ms': 8.58, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,438 basehttp 556 140370012468928 "GET /api/projects/ HTTP/1.1" 200 141
+INFO 2026-01-30 14:47:32,567 middleware 556 140369798887104 API请求: {'timestamp': '2026-01-30T06:47:32.567872+00:00', 'method': 'GET', 'path': '/api/testcases/', 'query_params': {}, 'status_code': 200, 'duration_ms': 126.92, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,569 basehttp 556 140369798887104 "GET /api/testcases/ HTTP/1.1" 200 162
+INFO 2026-01-30 14:47:32,579 middleware 556 140369790494400 API请求: {'timestamp': '2026-01-30T06:47:32.579210+00:00', 'method': 'GET', 'path': '/api/bugs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 7.6, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,579 basehttp 556 140369790494400 "GET /api/bugs/ HTTP/1.1" 200 141
+INFO 2026-01-30 14:47:32,588 middleware 556 140369782101696 API请求: {'timestamp': '2026-01-30T06:47:32.588331+00:00', 'method': 'GET', 'path': '/api/apitest/', 'query_params': {}, 'status_code': 200, 'duration_ms': 5.66, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,589 basehttp 556 140369782101696 "GET /api/apitest/ HTTP/1.1" 200 219
+INFO 2026-01-30 14:47:32,597 middleware 556 140369773708992 API请求: {'timestamp': '2026-01-30T06:47:32.597750+00:00', 'method': 'GET', 'path': '/api/perftest/', 'query_params': {}, 'status_code': 200, 'duration_ms': 5.14, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,598 basehttp 556 140369773708992 "GET /api/perftest/ HTTP/1.1" 200 167
+INFO 2026-01-30 14:47:32,609 middleware 556 140369765316288 API请求: {'timestamp': '2026-01-30T06:47:32.609536+00:00', 'method': 'GET', 'path': '/api/llm/providers/', 'query_params': {}, 'status_code': 200, 'duration_ms': 8.69, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,610 basehttp 556 140369765316288 "GET /api/llm/providers/ HTTP/1.1" 200 1815
+INFO 2026-01-30 14:47:32,615 middleware 556 140369756923584 API请求: {'timestamp': '2026-01-30T06:47:32.615930+00:00', 'method': 'GET', 'path': '/api/feishu/', 'query_params': {}, 'status_code': 200, 'duration_ms': 3.68, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,616 basehttp 556 140369756923584 "GET /api/feishu/ HTTP/1.1" 200 217
+INFO 2026-01-30 14:47:32,632 middleware 556 140369748530880 API请求: {'timestamp': '2026-01-30T06:47:32.632892+00:00', 'method': 'GET', 'path': '/api/users/roles/', 'query_params': {}, 'status_code': 200, 'duration_ms': 14.06, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,633 basehttp 556 140369748530880 "GET /api/users/roles/ HTTP/1.1" 200 2573
+INFO 2026-01-30 14:47:32,645 middleware 556 140369262016192 API请求: {'timestamp': '2026-01-30T06:47:32.645001+00:00', 'method': 'GET', 'path': '/api/users/permissions/', 'query_params': {}, 'status_code': 200, 'duration_ms': 9.41, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,645 basehttp 556 140369262016192 "GET /api/users/permissions/ HTTP/1.1" 200 3618
+INFO 2026-01-30 14:47:32,663 middleware 556 140369253623488 API请求: {'timestamp': '2026-01-30T06:47:32.663684+00:00', 'method': 'GET', 'path': '/api/core/dashboard/', 'query_params': {}, 'status_code': 200, 'duration_ms': 15.58, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 14:47:32,664 basehttp 556 140369253623488 "GET /api/core/dashboard/ HTTP/1.1" 200 279
+INFO 2026-01-30 14:48:50,088 basehttp 556 140369245230784 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2026-01-30 14:48:50,103 middleware 556 140369245230784 API请求警告: {'timestamp': '2026-01-30T06:48:50.103049+00:00', 'method': 'POST', 'path': '/api/auth/login/', 'query_params': {}, 'status_code': 404, 'duration_ms': 9.39, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 14:48:50,104 log 556 140369245230784 Not Found: /api/auth/login/
+WARNING 2026-01-30 14:48:50,105 basehttp 556 140369245230784 "POST /api/auth/login/ HTTP/1.1" 404 5184
+INFO 2026-01-30 15:12:37,076 middleware 556 140369245230784 API请求: {'timestamp': '2026-01-30T07:12:37.076854+00:00', 'method': 'POST', 'path': '/api/users/auth/login/', 'query_params': {}, 'status_code': 200, 'duration_ms': 2017.43, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 15:12:37,109 basehttp 556 140369245230784 "POST /api/users/auth/login/ HTTP/1.1" 200 754
+INFO 2026-01-30 15:13:27,616 middleware 556 140369245230784 API请求: {'timestamp': '2026-01-30T07:13:27.616810+00:00', 'method': 'POST', 'path': '/api/users/auth/login/', 'query_params': {}, 'status_code': 200, 'duration_ms': 2557.7, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:27,632 basehttp 556 140369245230784 "POST /api/users/auth/login/ HTTP/1.1" 200 754
+INFO 2026-01-30 15:13:27,701 middleware 556 140369236838080 API请求: {'timestamp': '2026-01-30T07:13:27.701450+00:00', 'method': 'GET', 'path': '/api/users/auth/me/', 'query_params': {}, 'status_code': 200, 'duration_ms': 46.46, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:27,702 basehttp 556 140369236838080 "GET /api/users/auth/me/ HTTP/1.1" 200 252
+INFO 2026-01-30 15:13:27,725 middleware 556 140369236838080 API请求: {'timestamp': '2026-01-30T07:13:27.725262+00:00', 'method': 'POST', 'path': '/api/users/auth/token/refresh/', 'query_params': {}, 'status_code': 200, 'duration_ms': 16.55, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:27,726 basehttp 556 140369236838080 "POST /api/users/auth/token/refresh/ HTTP/1.1" 200 489
+ERROR 2026-01-30 15:13:27,926 exceptions 556 140369236838080 未捕获的异常: Cannot resolve keyword 'created_at' into field. Choices are: added_members, api_test_jobs, apidefinition_created, apidefinition_deleted, apidefinition_updated, apitestcase_created, apitestcase_deleted, apitestcase_updated, apitestjob_created, apitestjob_deleted, apitestjob_updated, apitestresult_created, apitestresult_deleted, apitestresult_updated, assigned_bugs, assigned_roles, auditlog, avatar, bug_created, bug_deleted, bug_status_changed, bug_updated, bugcomment_created, bugcomment_deleted, bugcomment_updated, bughistory, bughistory_created, bughistory_deleted, bughistory_updated, date_joined, department, email, executed_cases, feishu_open_id, feishu_user_id, feishuchatbinding_created, feishuchatbinding_deleted, feishuchatbinding_updated, feishuconfig_created, feishuconfig_deleted, feishuconfig_updated, feishumessagetemplate_created, feishumessagetemplate_deleted, feishumessagetemplate_updated, feishunotificationlog_created, feishunotificationlog_deleted, feishunotificationlog_updated, groups, id, is_active, is_staff, is_superuser, last_activity_at, last_login, last_login_ip, llmconfig_created, llmconfig_deleted, llmconfig_updated, llmconversation_created, llmconversation_deleted, llmconversation_updated, llmmessage_created, llmmessage_deleted, llmmessage_updated, llmprovider_created, llmprovider_deleted, llmprovider_updated, llmtestgeneration_created, llmtestgeneration_deleted, llmtestgeneration_updated, logentry, login_logs, managed_plans, managed_versions, nickname, owned_projects, password, perf_test_jobs, perftestjob_created, perftestjob_deleted, perftestjob_updated, perftestmetrics_created, perftestmetrics_deleted, perftestmetrics_updated, perftestscenario_created, perftestscenario_deleted, perftestscenario_updated, phone, position, preferences, project_created, project_deleted, project_members, project_status_changed, project_updated, projectenvironment_created, projectenvironment_deleted, projectenvironment_updated, projectmilestone_created, projectmilestone_deleted, projectmilestone_updated, projectversion_created, projectversion_deleted, projectversion_updated, report_created, report_deleted, report_updated, reported_bugs, reporttemplate_created, reporttemplate_deleted, reporttemplate_updated, status, testcase_created, testcase_deleted, testcase_status_changed, testcase_updated, testplan_created, testplan_deleted, testplan_updated, testsuite_created, testsuite_deleted, testsuite_updated, user_permissions, user_roles, user_type, username
+ERROR 2026-01-30 15:13:27,953 exceptions 556 140369236838080 Traceback (most recent call last):
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/generics.py", line 154, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/filters.py", line 327, in filter_queryset
+    return queryset.order_by(*ordering)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/db/models/query.py", line 1727, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/db/models/sql/query.py", line 2305, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1806, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: added_members, api_test_jobs, apidefinition_created, apidefinition_deleted, apidefinition_updated, apitestcase_created, apitestcase_deleted, apitestcase_updated, apitestjob_created, apitestjob_deleted, apitestjob_updated, apitestresult_created, apitestresult_deleted, apitestresult_updated, assigned_bugs, assigned_roles, auditlog, avatar, bug_created, bug_deleted, bug_status_changed, bug_updated, bugcomment_created, bugcomment_deleted, bugcomment_updated, bughistory, bughistory_created, bughistory_deleted, bughistory_updated, date_joined, department, email, executed_cases, feishu_open_id, feishu_user_id, feishuchatbinding_created, feishuchatbinding_deleted, feishuchatbinding_updated, feishuconfig_created, feishuconfig_deleted, feishuconfig_updated, feishumessagetemplate_created, feishumessagetemplate_deleted, feishumessagetemplate_updated, feishunotificationlog_created, feishunotificationlog_deleted, feishunotificationlog_updated, groups, id, is_active, is_staff, is_superuser, last_activity_at, last_login, last_login_ip, llmconfig_created, llmconfig_deleted, llmconfig_updated, llmconversation_created, llmconversation_deleted, llmconversation_updated, llmmessage_created, llmmessage_deleted, llmmessage_updated, llmprovider_created, llmprovider_deleted, llmprovider_updated, llmtestgeneration_created, llmtestgeneration_deleted, llmtestgeneration_updated, logentry, login_logs, managed_plans, managed_versions, nickname, owned_projects, password, perf_test_jobs, perftestjob_created, perftestjob_deleted, perftestjob_updated, perftestmetrics_created, perftestmetrics_deleted, perftestmetrics_updated, perftestscenario_created, perftestscenario_deleted, perftestscenario_updated, phone, position, preferences, project_created, project_deleted, project_members, project_status_changed, project_updated, projectenvironment_created, projectenvironment_deleted, projectenvironment_updated, projectmilestone_created, projectmilestone_deleted, projectmilestone_updated, projectversion_created, projectversion_deleted, projectversion_updated, report_created, report_deleted, report_updated, reported_bugs, reporttemplate_created, reporttemplate_deleted, reporttemplate_updated, status, testcase_created, testcase_deleted, testcase_status_changed, testcase_updated, testplan_created, testplan_deleted, testplan_updated, testsuite_created, testsuite_deleted, testsuite_updated, user_permissions, user_roles, user_type, username
+
+ERROR 2026-01-30 15:13:28,033 log 556 140369236838080 Internal Server Error: /api/users/users/
+Traceback (most recent call last):
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/generics.py", line 154, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/rest_framework/filters.py", line 327, in filter_queryset
+    return queryset.order_by(*ordering)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/db/models/query.py", line 1727, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/db/models/sql/query.py", line 2305, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "/home/kimi/.local/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1806, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: added_members, api_test_jobs, apidefinition_created, apidefinition_deleted, apidefinition_updated, apitestcase_created, apitestcase_deleted, apitestcase_updated, apitestjob_created, apitestjob_deleted, apitestjob_updated, apitestresult_created, apitestresult_deleted, apitestresult_updated, assigned_bugs, assigned_roles, auditlog, avatar, bug_created, bug_deleted, bug_status_changed, bug_updated, bugcomment_created, bugcomment_deleted, bugcomment_updated, bughistory, bughistory_created, bughistory_deleted, bughistory_updated, date_joined, department, email, executed_cases, feishu_open_id, feishu_user_id, feishuchatbinding_created, feishuchatbinding_deleted, feishuchatbinding_updated, feishuconfig_created, feishuconfig_deleted, feishuconfig_updated, feishumessagetemplate_created, feishumessagetemplate_deleted, feishumessagetemplate_updated, feishunotificationlog_created, feishunotificationlog_deleted, feishunotificationlog_updated, groups, id, is_active, is_staff, is_superuser, last_activity_at, last_login, last_login_ip, llmconfig_created, llmconfig_deleted, llmconfig_updated, llmconversation_created, llmconversation_deleted, llmconversation_updated, llmmessage_created, llmmessage_deleted, llmmessage_updated, llmprovider_created, llmprovider_deleted, llmprovider_updated, llmtestgeneration_created, llmtestgeneration_deleted, llmtestgeneration_updated, logentry, login_logs, managed_plans, managed_versions, nickname, owned_projects, password, perf_test_jobs, perftestjob_created, perftestjob_deleted, perftestjob_updated, perftestmetrics_created, perftestmetrics_deleted, perftestmetrics_updated, perftestscenario_created, perftestscenario_deleted, perftestscenario_updated, phone, position, preferences, project_created, project_deleted, project_members, project_status_changed, project_updated, projectenvironment_created, projectenvironment_deleted, projectenvironment_updated, projectmilestone_created, projectmilestone_deleted, projectmilestone_updated, projectversion_created, projectversion_deleted, projectversion_updated, report_created, report_deleted, report_updated, reported_bugs, reporttemplate_created, reporttemplate_deleted, reporttemplate_updated, status, testcase_created, testcase_deleted, testcase_status_changed, testcase_updated, testplan_created, testplan_deleted, testplan_updated, testsuite_created, testsuite_deleted, testsuite_updated, user_permissions, user_roles, user_type, username
+ERROR 2026-01-30 15:13:28,048 middleware 556 140369236838080 API请求错误: {'timestamp': '2026-01-30T07:13:28.047937+00:00', 'method': 'GET', 'path': '/api/users/users/', 'query_params': {}, 'status_code': 500, 'duration_ms': 305.58, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+ERROR 2026-01-30 15:13:28,052 basehttp 556 140369236838080 "GET /api/users/users/ HTTP/1.1" 500 138111
+INFO 2026-01-30 15:13:28,121 middleware 556 140369236838080 API请求: {'timestamp': '2026-01-30T07:13:28.121178+00:00', 'method': 'GET', 'path': '/api/users/roles/', 'query_params': {}, 'status_code': 200, 'duration_ms': 60.93, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,126 basehttp 556 140369236838080 "GET /api/users/roles/ HTTP/1.1" 200 2573
+INFO 2026-01-30 15:13:28,156 middleware 556 140369228445376 API请求: {'timestamp': '2026-01-30T07:13:28.156780+00:00', 'method': 'GET', 'path': '/api/users/permissions/', 'query_params': {}, 'status_code': 200, 'duration_ms': 31.52, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,157 basehttp 556 140369228445376 "GET /api/users/permissions/ HTTP/1.1" 200 3618
+INFO 2026-01-30 15:13:28,214 middleware 556 140369236838080 API请求: {'timestamp': '2026-01-30T07:13:28.214204+00:00', 'method': 'GET', 'path': '/api/projects/', 'query_params': {}, 'status_code': 200, 'duration_ms': 47.1, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,214 basehttp 556 140369236838080 "GET /api/projects/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:13:28,440 middleware 556 140369228445376 API请求: {'timestamp': '2026-01-30T07:13:28.440806+00:00', 'method': 'POST', 'path': '/api/projects/', 'query_params': {}, 'status_code': 201, 'duration_ms': 222.38, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,443 basehttp 556 140369228445376 "POST /api/projects/ HTTP/1.1" 201 255
+INFO 2026-01-30 15:13:28,495 middleware 556 140369236838080 API请求: {'timestamp': '2026-01-30T07:13:28.495072+00:00', 'method': 'GET', 'path': '/api/testcases/', 'query_params': {}, 'status_code': 200, 'duration_ms': 43.25, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,498 basehttp 556 140369236838080 "GET /api/testcases/ HTTP/1.1" 200 162
+INFO 2026-01-30 15:13:28,537 middleware 556 140369236838080 API请求: {'timestamp': '2026-01-30T07:13:28.537077+00:00', 'method': 'GET', 'path': '/api/bugs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 35.36, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,541 basehttp 556 140369236838080 "GET /api/bugs/ HTTP/1.1" 200 141
+WARNING 2026-01-30 15:13:28,566 middleware 556 140369245230784 API请求警告: {'timestamp': '2026-01-30T07:13:28.566157+00:00', 'method': 'GET', 'path': '/api/apitest/projects/', 'query_params': {}, 'status_code': 404, 'duration_ms': 19.0, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+WARNING 2026-01-30 15:13:28,597 log 556 140369245230784 Not Found: /api/apitest/projects/
+WARNING 2026-01-30 15:13:28,601 basehttp 556 140369245230784 "GET /api/apitest/projects/ HTTP/1.1" 404 17130
+WARNING 2026-01-30 15:13:28,614 middleware 556 140369236838080 API请求警告: {'timestamp': '2026-01-30T07:13:28.614297+00:00', 'method': 'GET', 'path': '/api/perftest/projects/', 'query_params': {}, 'status_code': 404, 'duration_ms': 10.05, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+WARNING 2026-01-30 15:13:28,614 log 556 140369236838080 Not Found: /api/perftest/projects/
+WARNING 2026-01-30 15:13:28,618 basehttp 556 140369236838080 "GET /api/perftest/projects/ HTTP/1.1" 404 14654
+INFO 2026-01-30 15:13:28,630 middleware 556 140369245230784 API请求: {'timestamp': '2026-01-30T07:13:28.630175+00:00', 'method': 'GET', 'path': '/api/llm/configs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 11.0, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,636 basehttp 556 140369245230784 "GET /api/llm/configs/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:13:28,655 middleware 556 140369236838080 API请求: {'timestamp': '2026-01-30T07:13:28.655779+00:00', 'method': 'GET', 'path': '/api/llm/providers/', 'query_params': {}, 'status_code': 200, 'duration_ms': 11.96, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,656 basehttp 556 140369236838080 "GET /api/llm/providers/ HTTP/1.1" 200 1815
+INFO 2026-01-30 15:13:28,692 middleware 556 140369236838080 API请求: {'timestamp': '2026-01-30T07:13:28.692195+00:00', 'method': 'GET', 'path': '/api/feishu/configs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 32.61, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:13:28,695 basehttp 556 140369236838080 "GET /api/feishu/configs/ HTTP/1.1" 200 141
+WARNING 2026-01-30 15:13:28,716 middleware 556 140369245230784 API请求警告: {'timestamp': '2026-01-30T07:13:28.716138+00:00', 'method': 'GET', 'path': '/api/core/system-info/', 'query_params': {}, 'status_code': 404, 'duration_ms': 12.05, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+WARNING 2026-01-30 15:13:28,716 log 556 140369245230784 Not Found: /api/core/system-info/
+WARNING 2026-01-30 15:13:28,718 basehttp 556 140369245230784 "GET /api/core/system-info/ HTTP/1.1" 404 15124
+WARNING 2026-01-30 15:13:29,110 connection 556 140369236838080 No hostname was supplied. Reverting to default 'localhost'
+WARNING 2026-01-30 15:13:29,114 connection 556 140369236838080 No hostname was supplied. Reverting to default 'localhost'
+ERROR 2026-01-30 15:13:30,118 middleware 556 140369236838080 API请求错误: {'timestamp': '2026-01-30T07:13:30.118873+00:00', 'method': 'GET', 'path': '/api/core/health/', 'query_params': {}, 'status_code': 503, 'duration_ms': 1393.4, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+ERROR 2026-01-30 15:13:30,121 log 556 140369236838080 Service Unavailable: /api/core/health/
+ERROR 2026-01-30 15:13:30,121 basehttp 556 140369236838080 "GET /api/core/health/ HTTP/1.1" 503 288
+INFO 2026-01-30 15:15:56,331 autoreload 556 140370341575552 /mnt/okcomputer/output/smarttest_platform/apps/users/views.py changed, reloading.
+INFO 2026-01-30 15:16:58,091 autoreload 1056 140239061158784 Watching for file changes with StatReloader
+INFO 2026-01-30 15:17:07,527 middleware 1056 140238760441536 API请求: {'timestamp': '2026-01-30T07:17:07.527339+00:00', 'method': 'POST', 'path': '/api/users/auth/login/', 'query_params': {}, 'status_code': 200, 'duration_ms': 1960.6, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'curl/7.88.1'}
+INFO 2026-01-30 15:17:07,529 basehttp 1056 140238760441536 "POST /api/users/auth/login/ HTTP/1.1" 200 754
+INFO 2026-01-30 15:17:44,358 middleware 1056 140238760441536 API请求: {'timestamp': '2026-01-30T07:17:44.358776+00:00', 'method': 'POST', 'path': '/api/users/auth/login/', 'query_params': {}, 'status_code': 200, 'duration_ms': 1830.6, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,362 basehttp 1056 140238760441536 "POST /api/users/auth/login/ HTTP/1.1" 200 754
+INFO 2026-01-30 15:17:44,377 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:44.377292+00:00', 'method': 'GET', 'path': '/api/users/auth/me/', 'query_params': {}, 'status_code': 200, 'duration_ms': 10.13, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,378 basehttp 1056 140238668166848 "GET /api/users/auth/me/ HTTP/1.1" 200 252
+INFO 2026-01-30 15:17:44,396 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:44.396329+00:00', 'method': 'POST', 'path': '/api/users/auth/token/refresh/', 'query_params': {}, 'status_code': 200, 'duration_ms': 15.23, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,401 basehttp 1056 140238668166848 "POST /api/users/auth/token/refresh/ HTTP/1.1" 200 489
+INFO 2026-01-30 15:17:44,434 middleware 1056 140238659774144 API请求: {'timestamp': '2026-01-30T07:17:44.434328+00:00', 'method': 'GET', 'path': '/api/users/users/', 'query_params': {}, 'status_code': 200, 'duration_ms': 26.22, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,445 basehttp 1056 140238659774144 "GET /api/users/users/ HTTP/1.1" 200 267
+INFO 2026-01-30 15:17:44,504 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:44.504265+00:00', 'method': 'GET', 'path': '/api/users/roles/', 'query_params': {}, 'status_code': 200, 'duration_ms': 54.31, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,507 basehttp 1056 140238668166848 "GET /api/users/roles/ HTTP/1.1" 200 2573
+INFO 2026-01-30 15:17:44,527 middleware 1056 140238659774144 API请求: {'timestamp': '2026-01-30T07:17:44.527208+00:00', 'method': 'GET', 'path': '/api/users/permissions/', 'query_params': {}, 'status_code': 200, 'duration_ms': 18.8, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,530 basehttp 1056 140238659774144 "GET /api/users/permissions/ HTTP/1.1" 200 3618
+INFO 2026-01-30 15:17:44,654 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:44.654150+00:00', 'method': 'GET', 'path': '/api/projects/', 'query_params': {}, 'status_code': 200, 'duration_ms': 122.09, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,668 basehttp 1056 140238668166848 "GET /api/projects/ HTTP/1.1" 200 424
+INFO 2026-01-30 15:17:44,850 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:44.850668+00:00', 'method': 'GET', 'path': '/api/testcases/', 'query_params': {}, 'status_code': 200, 'duration_ms': 158.23, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,854 basehttp 1056 140238668166848 "GET /api/testcases/ HTTP/1.1" 200 162
+INFO 2026-01-30 15:17:44,869 middleware 1056 140238659774144 API请求: {'timestamp': '2026-01-30T07:17:44.869042+00:00', 'method': 'GET', 'path': '/api/bugs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 13.16, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,892 basehttp 1056 140238659774144 "GET /api/bugs/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:17:44,903 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:44.903219+00:00', 'method': 'GET', 'path': '/api/apitest/definitions/', 'query_params': {}, 'status_code': 200, 'duration_ms': 9.46, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,907 basehttp 1056 140238668166848 "GET /api/apitest/definitions/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:17:44,937 middleware 1056 140238659774144 API请求: {'timestamp': '2026-01-30T07:17:44.937815+00:00', 'method': 'GET', 'path': '/api/apitest/cases/', 'query_params': {}, 'status_code': 200, 'duration_ms': 17.66, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,945 basehttp 1056 140238659774144 "GET /api/apitest/cases/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:17:44,964 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:44.964614+00:00', 'method': 'GET', 'path': '/api/perftest/scenarios/', 'query_params': {}, 'status_code': 200, 'duration_ms': 11.89, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:44,967 basehttp 1056 140238668166848 "GET /api/perftest/scenarios/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:17:45,002 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:45.002425+00:00', 'method': 'GET', 'path': '/api/llm/configs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 10.1, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:45,005 basehttp 1056 140238668166848 "GET /api/llm/configs/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:17:45,019 middleware 1056 140238659774144 API请求: {'timestamp': '2026-01-30T07:17:45.019610+00:00', 'method': 'GET', 'path': '/api/llm/providers/', 'query_params': {}, 'status_code': 200, 'duration_ms': 12.89, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:45,020 basehttp 1056 140238659774144 "GET /api/llm/providers/ HTTP/1.1" 200 1815
+INFO 2026-01-30 15:17:45,035 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:17:45.035825+00:00', 'method': 'GET', 'path': '/api/feishu/configs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 11.62, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:45,036 basehttp 1056 140238668166848 "GET /api/feishu/configs/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:17:46,156 middleware 1056 140238659774144 API请求: {'timestamp': '2026-01-30T07:17:46.156377+00:00', 'method': 'GET', 'path': '/api/core/stats/', 'query_params': {}, 'status_code': 200, 'duration_ms': 1117.12, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+INFO 2026-01-30 15:17:46,157 basehttp 1056 140238659774144 "GET /api/core/stats/ HTTP/1.1" 200 322
+WARNING 2026-01-30 15:17:46,513 connection 1056 140238668166848 No hostname was supplied. Reverting to default 'localhost'
+WARNING 2026-01-30 15:17:46,519 connection 1056 140238668166848 No hostname was supplied. Reverting to default 'localhost'
+ERROR 2026-01-30 15:17:47,523 middleware 1056 140238668166848 API请求错误: {'timestamp': '2026-01-30T07:17:47.523658+00:00', 'method': 'GET', 'path': '/api/core/health/', 'query_params': {}, 'status_code': 503, 'duration_ms': 1363.24, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'python-requests/2.32.3'}
+ERROR 2026-01-30 15:17:47,532 log 1056 140238668166848 Service Unavailable: /api/core/health/
+ERROR 2026-01-30 15:17:47,532 basehttp 1056 140238668166848 "GET /api/core/health/ HTTP/1.1" 503 288
+INFO 2026-01-30 15:19:35,671 basehttp 1056 140238668166848 "OPTIONS /api/users/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-30 15:19:36,547 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:19:36.547919+00:00', 'method': 'POST', 'path': '/api/users/auth/login/', 'query_params': {}, 'status_code': 200, 'duration_ms': 855.43, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+INFO 2026-01-30 15:19:36,548 basehttp 1056 140238668166848 "POST /api/users/auth/login/ HTTP/1.1" 200 754
+INFO 2026-01-30 15:19:36,716 basehttp 1056 140238668166848 "OPTIONS /api/core/dashboard/stats/ HTTP/1.1" 200 0
+WARNING 2026-01-30 15:19:36,738 middleware 1056 140238668166848 API请求警告: {'timestamp': '2026-01-30T07:19:36.738066+00:00', 'method': 'GET', 'path': '/api/core/dashboard/stats/', 'query_params': {}, 'status_code': 404, 'duration_ms': 19.19, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:19:36,740 log 1056 140238668166848 Not Found: /api/core/dashboard/stats/
+INFO 2026-01-30 15:19:36,739 basehttp 1056 140238659774144 "OPTIONS /api/core/dashboard/recent-bugs/ HTTP/1.1" 200 0
+WARNING 2026-01-30 15:19:36,742 basehttp 1056 140238668166848 "GET /api/core/dashboard/stats/ HTTP/1.1" 404 15136
+INFO 2026-01-30 15:19:36,744 basehttp 1056 140238659774144 "OPTIONS /api/core/dashboard/recent-activities/ HTTP/1.1" 200 0
+INFO 2026-01-30 15:19:36,742 basehttp 1056 140238649284288 "OPTIONS /api/core/dashboard/recent-activities/ HTTP/1.1" 200 0
+INFO 2026-01-30 15:19:36,747 basehttp 1056 140238640891584 "OPTIONS /api/core/dashboard/recent-bugs/ HTTP/1.1" 200 0
+WARNING 2026-01-30 15:19:36,780 middleware 1056 140238632498880 API请求警告: {'timestamp': '2026-01-30T07:19:36.780397+00:00', 'method': 'GET', 'path': '/api/core/dashboard/recent-bugs/', 'query_params': {}, 'status_code': 404, 'duration_ms': 23.19, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:19:36,780 middleware 1056 140238649284288 API请求警告: {'timestamp': '2026-01-30T07:19:36.774226+00:00', 'method': 'GET', 'path': '/api/core/dashboard/recent-activities/', 'query_params': {}, 'status_code': 404, 'duration_ms': 21.48, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:19:36,781 log 1056 140238632498880 Not Found: /api/core/dashboard/recent-bugs/
+WARNING 2026-01-30 15:19:36,806 basehttp 1056 140238632498880 "GET /api/core/dashboard/recent-bugs/ HTTP/1.1" 404 15154
+WARNING 2026-01-30 15:19:36,806 middleware 1056 140238640891584 API请求警告: {'timestamp': '2026-01-30T07:19:36.806223+00:00', 'method': 'GET', 'path': '/api/core/dashboard/stats/', 'query_params': {}, 'status_code': 404, 'duration_ms': 13.39, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:19:36,791 log 1056 140238649284288 Not Found: /api/core/dashboard/recent-activities/
+WARNING 2026-01-30 15:19:36,820 basehttp 1056 140238649284288 "GET /api/core/dashboard/recent-activities/ HTTP/1.1" 404 15172
+WARNING 2026-01-30 15:19:36,819 middleware 1056 140238668166848 API请求警告: {'timestamp': '2026-01-30T07:19:36.819796+00:00', 'method': 'GET', 'path': '/api/core/dashboard/recent-bugs/', 'query_params': {}, 'status_code': 404, 'duration_ms': 11.33, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:19:36,820 log 1056 140238640891584 Not Found: /api/core/dashboard/stats/
+WARNING 2026-01-30 15:19:36,821 basehttp 1056 140238640891584 "GET /api/core/dashboard/stats/ HTTP/1.1" 404 15136
+WARNING 2026-01-30 15:19:36,821 log 1056 140238668166848 Not Found: /api/core/dashboard/recent-bugs/
+WARNING 2026-01-30 15:19:36,824 basehttp 1056 140238668166848 "GET /api/core/dashboard/recent-bugs/ HTTP/1.1" 404 15154
+WARNING 2026-01-30 15:19:36,899 middleware 1056 140238640891584 API请求警告: {'timestamp': '2026-01-30T07:19:36.899376+00:00', 'method': 'GET', 'path': '/api/core/dashboard/recent-activities/', 'query_params': {}, 'status_code': 404, 'duration_ms': 32.12, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:19:36,900 log 1056 140238640891584 Not Found: /api/core/dashboard/recent-activities/
+WARNING 2026-01-30 15:19:36,902 basehttp 1056 140238640891584 "GET /api/core/dashboard/recent-activities/ HTTP/1.1" 404 15172
+INFO 2026-01-30 15:20:05,862 basehttp 1056 140238640891584 "OPTIONS /api/users/? HTTP/1.1" 200 0
+INFO 2026-01-30 15:20:05,895 basehttp 1056 140238668166848 "OPTIONS /api/roles/ HTTP/1.1" 200 0
+INFO 2026-01-30 15:20:05,900 basehttp 1056 140238668166848 "OPTIONS /api/roles/ HTTP/1.1" 200 0
+INFO 2026-01-30 15:20:05,907 middleware 1056 140238640891584 API请求: {'timestamp': '2026-01-30T07:20:05.907767+00:00', 'method': 'GET', 'path': '/api/users/', 'query_params': {}, 'status_code': 200, 'duration_ms': 15.2, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+INFO 2026-01-30 15:20:05,915 basehttp 1056 140238640891584 "GET /api/users/? HTTP/1.1" 200 219
+WARNING 2026-01-30 15:20:05,918 middleware 1056 140238649284288 API请求警告: {'timestamp': '2026-01-30T07:20:05.918288+00:00', 'method': 'GET', 'path': '/api/roles/', 'query_params': {}, 'status_code': 404, 'duration_ms': 9.79, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:20:05,919 log 1056 140238649284288 Not Found: /api/roles/
+WARNING 2026-01-30 15:20:05,922 basehttp 1056 140238649284288 "GET /api/roles/ HTTP/1.1" 404 5168
+WARNING 2026-01-30 15:20:05,954 middleware 1056 140238668166848 API请求警告: {'timestamp': '2026-01-30T07:20:05.954457+00:00', 'method': 'GET', 'path': '/api/roles/', 'query_params': {}, 'status_code': 404, 'duration_ms': 9.2, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:20:05,969 log 1056 140238668166848 Not Found: /api/roles/
+INFO 2026-01-30 15:20:05,969 middleware 1056 140238649284288 API请求: {'timestamp': '2026-01-30T07:20:05.969315+00:00', 'method': 'GET', 'path': '/api/users/', 'query_params': {}, 'status_code': 200, 'duration_ms': 10.89, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+INFO 2026-01-30 15:20:05,971 basehttp 1056 140238649284288 "GET /api/users/? HTTP/1.1" 200 219
+WARNING 2026-01-30 15:20:05,970 basehttp 1056 140238668166848 "GET /api/roles/ HTTP/1.1" 404 5168
+WARNING 2026-01-30 15:20:20,210 middleware 1056 140238668166848 API请求警告: {'timestamp': '2026-01-30T07:20:20.210522+00:00', 'method': 'GET', 'path': '/api/roles/', 'query_params': {}, 'status_code': 404, 'duration_ms': 8.58, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:20:20,212 log 1056 140238668166848 Not Found: /api/roles/
+WARNING 2026-01-30 15:20:20,215 basehttp 1056 140238668166848 "GET /api/roles/ HTTP/1.1" 404 5168
+INFO 2026-01-30 15:20:20,218 basehttp 1056 140238649284288 "OPTIONS /api/permissions/ HTTP/1.1" 200 0
+INFO 2026-01-30 15:20:20,240 basehttp 1056 140238649284288 "OPTIONS /api/permissions/ HTTP/1.1" 200 0
+WARNING 2026-01-30 15:20:20,245 middleware 1056 140238668166848 API请求警告: {'timestamp': '2026-01-30T07:20:20.245033+00:00', 'method': 'GET', 'path': '/api/roles/', 'query_params': {}, 'status_code': 404, 'duration_ms': 20.83, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:20:20,260 log 1056 140238668166848 Not Found: /api/roles/
+WARNING 2026-01-30 15:20:20,265 basehttp 1056 140238668166848 "GET /api/roles/ HTTP/1.1" 404 5168
+WARNING 2026-01-30 15:20:20,259 middleware 1056 140238640891584 API请求警告: {'timestamp': '2026-01-30T07:20:20.259833+00:00', 'method': 'GET', 'path': '/api/permissions/', 'query_params': {}, 'status_code': 404, 'duration_ms': 20.1, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:20:20,265 log 1056 140238640891584 Not Found: /api/permissions/
+WARNING 2026-01-30 15:20:20,268 basehttp 1056 140238640891584 "GET /api/permissions/ HTTP/1.1" 404 5186
+WARNING 2026-01-30 15:20:20,310 middleware 1056 140238649284288 API请求警告: {'timestamp': '2026-01-30T07:20:20.309893+00:00', 'method': 'GET', 'path': '/api/permissions/', 'query_params': {}, 'status_code': 404, 'duration_ms': 13.01, 'user_id': None, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+WARNING 2026-01-30 15:20:20,310 log 1056 140238649284288 Not Found: /api/permissions/
+WARNING 2026-01-30 15:20:20,312 basehttp 1056 140238649284288 "GET /api/permissions/ HTTP/1.1" 404 5186
+INFO 2026-01-30 15:20:34,796 basehttp 1056 140238668166848 "OPTIONS /api/llm/configs/ HTTP/1.1" 200 0
+INFO 2026-01-30 15:20:34,796 basehttp 1056 140238649284288 "OPTIONS /api/llm/configs/ HTTP/1.1" 200 0
+INFO 2026-01-30 15:20:34,831 middleware 1056 140238649284288 API请求: {'timestamp': '2026-01-30T07:20:34.831766+00:00', 'method': 'GET', 'path': '/api/llm/configs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 25.69, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+INFO 2026-01-30 15:20:34,833 basehttp 1056 140238649284288 "GET /api/llm/configs/ HTTP/1.1" 200 141
+INFO 2026-01-30 15:20:34,909 middleware 1056 140238668166848 API请求: {'timestamp': '2026-01-30T07:20:34.909697+00:00', 'method': 'GET', 'path': '/api/llm/configs/', 'query_params': {}, 'status_code': 200, 'duration_ms': 33.5, 'user_id': 1, 'ip_address': '127.0.0.1', 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; zh-CN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.192 Safari/537.36'}
+INFO 2026-01-30 15:20:34,915 basehttp 1056 140238668166848 "GET /api/llm/configs/ HTTP/1.1" 200 141
+INFO 2026-01-30 16:06:42,828 autoreload 700 139767991565184 Watching for file changes with StatReloader
+INFO 2026-01-30 16:07:03,346 autoreload 700 139767991565184 /home/kimi/.local/lib/python3.12/site-packages/django/apps/registry.py changed, reloading.
+INFO 2026-01-30 16:07:27,551 autoreload 729 140283008240512 Watching for file changes with StatReloader
+INFO 2026-01-30 16:10:59,794 autoreload 729 140283008240512 /home/kimi/.local/lib/python3.12/site-packages/django/db/models/deletion.py changed, reloading.
+INFO 2026-01-30 16:11:01,088 autoreload 802 140491768986496 Watching for file changes with StatReloader
+INFO 2026-01-30 16:11:09,725 autoreload 802 140491768986496 /home/kimi/.local/lib/python3.12/site-packages/rest_framework/compat.py changed, reloading.
+INFO 2026-01-30 16:11:10,599 autoreload 804 140610818091904 Watching for file changes with StatReloader
+INFO 2026-01-30 16:11:12,028 autoreload 804 140610818091904 /home/kimi/.local/lib/python3.12/site-packages/rest_framework_simplejwt/__init__.py changed, reloading.
+INFO 2026-01-30 16:11:16,449 autoreload 806 139786412768128 Watching for file changes with StatReloader
+INFO 2026-01-30 16:12:51,664 autoreload 806 139786412768128 /home/kimi/.local/lib/python3.12/site-packages/django_celery_results/models.py changed, reloading.
+INFO 2026-01-30 16:12:54,026 autoreload 809 139816144956288 Watching for file changes with StatReloader
