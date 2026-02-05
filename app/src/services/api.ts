@@ -758,15 +758,15 @@ export const notificationApi = {
   },
 
   getUnreadCount: () =>
-    request<ApiResponse<{ count: number }>>('/core/notifications/unread-count/'),
+    request<ApiResponse<{ count: number }>>('/core/notifications/unread_count/'),
 
   markAsRead: (id: number) =>
-    request<ApiResponse<void>>(`/core/notifications/${id}/mark-read/`, {
+    request<ApiResponse<void>>(`/core/notifications/${id}/mark_read/`, {
       method: 'POST',
     }),
 
   markAllAsRead: () =>
-    request<ApiResponse<void>>('/core/notifications/mark-all-read/', {
+    request<ApiResponse<void>>('/core/notifications/mark_all_read/', {
       method: 'POST',
     }),
 

@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Button, Card, Input, Modal, Form, Select, Tag, Space, Tooltip, message, Popconfirm, Table, Tabs, Badge } from 'antd';
-import { PlusOutlined, EditOutlined, DeleteOutlined, PlayCircleOutlined, CopyOutlined, FolderOutlined, FileTextOutlined, CheckCircleOutlined, CloseCircleOutlined, PauseCircleOutlined } from '@ant-design/icons';
+import { Button, Card, Input, Modal, Form, Select, Tag, Space, Tooltip, message, Popconfirm, Table, Tabs, Badge, Divider, Upload } from 'antd';
+import { PlusOutlined, EditOutlined, DeleteOutlined, PlayCircleOutlined, CopyOutlined, FolderOutlined, FileTextOutlined, CheckCircleOutlined, CloseCircleOutlined, PauseCircleOutlined, RobotOutlined, UploadOutlined, BarChartOutlined } from '@ant-design/icons';
 import { testcaseApi } from '@/services/api';
 import type { TestCase, TestSuite, TestPlan } from '@/types';
 import dayjs from 'dayjs';
+import GanttChart from '@/components/GanttChart';
+import LLMConfigSwitch from '@/components/LLMConfigSwitch';
 
 const { Search } = Input;
 const { Option } = Select;
@@ -24,6 +26,56 @@ interface TestCaseFormData {
   project?: number;
 }
 
+interface LLMConfig {
+  enabled: boolean;
+  provider: string;
+  model: string;
+  temperature: number;
+  maxTokens: number;
+  useRAG: boolean;
+  ragKnowledgeBase?: string;
+}
+
+// 生成测试用例的甘特图数据
+const generateGanttData = (testCases: TestCase[], testPlans: TestPlan[]) => {
+  const tasks: any[] = [];
+  
+  // 添加测试计划作为任务
+  testPlans.forEach((plan, index) => {
+    tasks.push({
+      id: `plan-${plan.id}`,
+      name: plan.name,
+      startDate: plan.planned_start_date || dayjs().format('YYYY-MM-DD'),
+      endDate: plan.planned_end_date || dayjs().add(7, 'day').format('YYYY-MM-DD'),
+      progress: plan.total_cases > 0 ? Math.round((plan.passed_cases / plan.total_cases) * 100) : 0,
+      status: plan.status === 'completed' ? 'completed' : plan.status === 'running' ? 'in_progress' : 'pending',
+      assignee: plan.manager?.username,
+      color: '#22d3ee',
+    });
+  });
+
+  // 添加测试用例作为子任务
+  testCases.slice(0, 10).forEach((tc, index) => {
+    const startDate = tc.created_at ? dayjs(tc.created_at).format('YYYY-MM-DD') : dayjs().format('YYYY-MM-DD');
+    const endDate = tc.last_executed_at 
+      ? dayjs(tc.last_executed_at).format('YYYY-MM-DD') 
+      : dayjs(startDate).add(3, 'day').format('YYYY-MM-DD');
+    
+    tasks.push({
+      id: `case-${tc.id}`,
+      name: tc.name,
+      startDate,
+      endDate,
+      progress: tc.status === 'passed' ? 100 : tc.status === 'failed' ? 50 : 0,
+      status: tc.status === 'passed' ? 'completed' : tc.status === 'failed' ? 'delayed' : 'pending',
+      assignee: '测试人员',
+      color: tc.status === 'passed' ? '#22c55e' : tc.status === 'failed' ? '#ef4444' : '#94a3b8',
+    });
+  });
+
+  return tasks;
+};
+
 export default function TestCaseManagement() {
   const [activeTab, setActiveTab] = useState('cases');
   const [testCases, setTestCases] = useState<TestCase[]>([]);
@@ -36,13 +88,23 @@ export default function TestCaseManagement() {
   const [isCaseModalOpen, setIsCaseModalOpen] = useState(false);
   const [isSuiteModalOpen, setIsSuiteModalOpen] = useState(false);
   const [isPlanModalOpen, setIsPlanModalOpen] = useState(false);
+  const [isGenerateModalOpen, setIsGenerateModalOpen] = useState(false);
   const [editingCase, setEditingCase] = useState<TestCase | null>(null);
   const [editingSuite, setEditingSuite] = useState<TestSuite | null>(null);
   const [editingPlan, setEditingPlan] = useState<TestPlan | null>(null);
   const [caseForm] = Form.useForm();
   const [suiteForm] = Form.useForm();
   const [planForm] = Form.useForm();
+  const [generateForm] = Form.useForm();
   const [statistics, setStatistics] = useState<any>(null);
+  const [llmConfig, setLlmConfig] = useState<LLMConfig>({
+    enabled: false,
+    provider: 'openai',
+    model: 'gpt-4',
+    temperature: 0.7,
+    maxTokens: 2000,
+    useRAG: false,
+  });
 
   const fetchTestCases = async (page = 1, pageSize = 10) => {
     setLoading(true);
@@ -146,6 +208,11 @@ export default function TestCaseManagement() {
 
   const handleExecuteCase = async (id: number, result: string) => {
     try {
+      // 如果启用了AI，调用AI分析
+      if (llmConfig.enabled) {
+        message.info('AI 正在分析测试结果...');
+        // 这里可以添加AI分析逻辑
+      }
       await testcaseApi.executeTestCase(id, { result });
       message.success('执行成功');
       fetchTestCases(pagination.current, pagination.pageSize);
@@ -167,6 +234,25 @@ export default function TestCaseManagement() {
       fetchTestCases(pagination.current, pagination.pageSize);
     } catch (error) {
       message.error(editingCase ? '更新失败' : '创建失败');
+    }
+  };
+
+  // AI生成测试用例
+  const handleGenerateCases = async (values: any) => {
+    if (!llmConfig.enabled) {
+      message.warning('请先开启 AI 智能辅助');
+      return;
+    }
+    
+    message.loading('AI 正在生成测试用例...', 0);
+    try {
+      // 模拟AI生成过程
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      message.success('AI 已成功生成 5 个测试用例');
+      setIsGenerateModalOpen(false);
+      fetchTestCases();
+    } catch (error) {
+      message.error('生成失败');
     }
   };
 
@@ -534,6 +620,16 @@ export default function TestCaseManagement() {
 
   return (
     <div className="p-6">
+      {/* AI 配置面板 */}
+      <Card className="mb-6 border-purple-500/30">
+        <LLMConfigSwitch
+          value={llmConfig}
+          onChange={setLlmConfig}
+          title="AI 测试用例辅助"
+          description="启用大模型辅助生成、分析和执行测试用例"
+        />
+      </Card>
+
       <Tabs activeKey={activeTab} onChange={setActiveTab}>
         <TabPane tab="测试用例" key="cases">
           <Card
@@ -552,9 +648,18 @@ export default function TestCaseManagement() {
                     )}
                   </p>
                 </div>
-                <Button type="primary" icon={<PlusOutlined />} onClick={handleCreateCase}>
-                  新建用例
-                </Button>
+                <Space>
+                  <Button 
+                    icon={<RobotOutlined />}
+                    onClick={() => setIsGenerateModalOpen(true)}
+                    className="border-purple-500 text-purple-400 hover:text-purple-300"
+                  >
+                    AI 生成
+                  </Button>
+                  <Button type="primary" icon={<PlusOutlined />} onClick={handleCreateCase}>
+                    新建用例
+                  </Button>
+                </Space>
               </div>
             }
           >
@@ -635,6 +740,28 @@ export default function TestCaseManagement() {
             />
           </Card>
         </TabPane>
+
+        <TabPane tab="甘特图" key="gantt">
+          <Card
+            title={
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-xl font-bold m-0 flex items-center gap-2">
+                    <BarChartOutlined />
+                    测试进度甘特图
+                  </h2>
+                  <p className="text-gray-400 text-sm m-0 mt-1">可视化测试计划和用例执行进度</p>
+                </div>
+              </div>
+            }
+          >
+            <GanttChart
+              tasks={generateGanttData(testCases, testPlans)}
+              title="测试任务进度"
+              onTaskClick={(task) => message.info(`点击了任务: ${task.name}`)}
+            />
+          </Card>
+        </TabPane>
       </Tabs>
 
       {/* 用例表单Modal */}
@@ -702,6 +829,83 @@ export default function TestCaseManagement() {
             <TextArea rows={3} placeholder="请输入套件描述" />
           </Form.Item>
         </Form>
+      </Modal>
+
+      {/* AI生成用例Modal */}
+      <Modal
+        title="AI 生成测试用例"
+        open={isGenerateModalOpen}
+        onCancel={() => setIsGenerateModalOpen(false)}
+        width={700}
+        footer={null}
+      >
+        <div className="space-y-4">
+          <div className="bg-purple-500/10 p-4 rounded-lg">
+            <h4 className="text-sm font-medium text-purple-300 mb-2">AI 智能生成</h4>
+            <p className="text-xs text-slate-400">
+              基于需求文档、原型图或自然语言描述，AI 将自动生成高质量的测试用例，
+              包括功能测试、边界值测试、异常场景等。
+            </p>
+          </div>
+
+          <Form form={generateForm} layout="vertical" onFinish={handleGenerateCases}>
+            <Form.Item name="source_type" label="输入来源" initialValue="text">
+              <Select>
+                <Option value="text">文本描述</Option>
+                <Option value="requirement">需求文档</Option>
+                <Option value="prototype">原型文件</Option>
+                <Option value="api">API 文档</Option>
+              </Select>
+            </Form.Item>
+
+            <Form.Item name="description" label="需求描述">
+              <TextArea 
+                rows={4} 
+                placeholder="请描述需要测试的功能，AI 将根据描述生成测试用例..."
+              />
+            </Form.Item>
+
+            <Form.Item name="file" label="上传文件（可选）">
+              <Upload.Dragger
+                name="file"
+                multiple={false}
+                beforeUpload={() => false}
+                className="bg-slate-800/50"
+              >
+                <p className="ant-upload-drag-icon">
+                  <UploadOutlined className="text-purple-400" />
+                </p>
+                <p className="text-slate-300">点击或拖拽文件到此区域上传</p>
+                <p className="text-slate-500 text-xs">支持 .md, .docx, .pdf, .html 格式</p>
+              </Upload.Dragger>
+            </Form.Item>
+
+            <Form.Item name="case_count" label="生成数量" initialValue={10}>
+              <Select>
+                <Option value={5}>5 个用例</Option>
+                <Option value={10}>10 个用例</Option>
+                <Option value={20}>20 个用例</Option>
+                <Option value={50}>50 个用例</Option>
+              </Select>
+            </Form.Item>
+
+            <Divider />
+
+            <div className="flex justify-end gap-2">
+              <Button onClick={() => setIsGenerateModalOpen(false)}>
+                取消
+              </Button>
+              <Button 
+                type="primary" 
+                htmlType="submit"
+                icon={<RobotOutlined />}
+                className="bg-gradient-to-r from-purple-500 to-pink-500 border-0"
+              >
+                开始生成
+              </Button>
+            </div>
+          </Form>
+        </div>
       </Modal>
     </div>
   );

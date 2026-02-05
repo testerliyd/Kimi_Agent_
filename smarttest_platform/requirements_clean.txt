@@ -1,0 +1,48 @@
+# Django核心依赖
+django==4.2.11
+djangorestframework==3.15.2
+django-cors-headers==4.3.1
+django-filter==24.2
+django-extensions==3.2.3
+
+# 认证与安全
+djangorestframework-simplejwt==5.3.1
+bcrypt==4.1.3
+PyJWT==2.8.0
+
+# 缓存
+redis==5.0.4
+django-redis==5.4.0
+
+# HTTP请求
+requests==2.31.0
+httpx==0.27.0
+
+# 数据处理
+pandas==2.2.2
+numpy==1.26.4
+openpyxl==3.1.2
+
+# 工具库
+python-dotenv==1.0.1
+Pillow==10.3.0
+python-dateutil==2.9.0
+pytz==2024.1
+
+# 文档生成
+drf-yasg==1.21.7
+coreapi==2.3.3
+
+# 开发工具
+ipython==8.24.0
+
+# 测试工具
+pytest==8.2.0
+pytest-django==4.8.0
+pytest-html==4.1.1
+
+# 其他依赖
+urllib3==2.2.1
+certifi==2024.2.2
+charset-normalizer==3.3.2
+idna==3.7
